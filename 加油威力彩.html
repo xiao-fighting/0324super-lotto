@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let superLotto = (min,max)=>{
+            return Math.round(Math.random()*(max-min))+min
+        } 
+        let numA = [];
+        
+        for(let i = 0;i<6;i++){
+            let num = superLotto(1,10);
+            if(numA.indexOf(num)==-1){
+                numA.push(num);
+            }else{
+                i--;
+            }           
+        }
+                
+        // if(numA.length!==6&&numA.length<7){
+        //     numA.push(superLotto(1,38));
+        //     document.write(`A區的號碼是${numA}`);
+        // }else if(numA.length==6){
+        //     document.write(`A區的號碼是${numA}`);
+        // }
+        document.write(`A區的號碼是${numA}`);
+        document.write('<hr>')  
+        document.write(`B區的號碼是${superLotto(1,8)}`);
+        
+        
+
+    
+  </script>
+        
+    </script>
+</body>
+</html>
